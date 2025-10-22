@@ -134,3 +134,10 @@ class TestAccountService(TestCase):
         self.assertEqual(resp.status_code, status.HTTP_200_OK)
         data = resp.get_json()
         self.assertEqual(data["name"], account.name)
+
+
+@classmethod
+def setUpClass(cls):
+    """Run once before all tests"""
+    { other lines of code here ... }
+    talisman.force_https = False
